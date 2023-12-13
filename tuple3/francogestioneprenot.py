@@ -41,18 +41,22 @@ def rimuovi_prenotazione(prenotazioni, nome, giorno):
             prenotazioni.pop(i)
             break
 
+
 def tavoli_disponibili(prenotazioni, giorno):
-    prenotati=[]
+    prenotati = []
     for i in range(prenotazioni):
-        if prenotazioni[i][2]==giorno:
+        if prenotazioni[i][2] == giorno:
             prenotati.appen(prenotazioni[i][3])
     return prenotati
+
+
 def conto_totale(prenotazioni, giorno):
-    tot=0
+    tot = 0
     for i in range(prenotazioni):
-        if prenotazioni[i][2]==giorno:
-            tot+=1
+        if prenotazioni[i][2] == giorno:
+            tot += 1
     return tot
+
 
 inserimento = 0
 prenotazioni = []
@@ -75,11 +79,17 @@ while inserimento != 9:
         giorno = input("Inserire la data a cui era a carico la prenotazione:\n>")
         rimuovi_prenotazione(prenotazioni, nome, giorno)
     elif inserimento == 3:
-        giorno=input("Inserire il giorno per cui si vuole vedere le prenotazioni:\n>")
-        print(f"Prenotazioni per i tavoli del giorno {giorno}: {tavoli_disponibili(prenotazioni, giorno)}")
-    elif inserimento ==4:
+        giorno = input("Inserire il giorno per cui si vuole vedere le prenotazioni:\n>")
+        print(
+            f"Prenotazioni per i tavoli del giorno {giorno}: {tavoli_disponibili(prenotazioni, giorno)}"
+        )
+    elif inserimento == 4:
         # Non ho capito il punto
         print()
+    elif inserimento == 5:
+        giorno = input("Inserire il giorno per cui si vuole vedere le prenotazioni:\n>")
+        print(
+            f"Prenotazioni totali per il giorno {giorno}: {conto_totale(prenotazioni,giorno)}"
+        )
     else:
-        giorno=input("Inserire il giorno per cui si vuole vedere le prenotazioni:\n>")
-        print(f"Prenotazioni totali per il giorno {giorno}: {conto_totale(prenotazioni,giorno)}")
+        break
