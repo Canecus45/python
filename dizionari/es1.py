@@ -19,4 +19,4 @@ for materia in voti:
     media+=voti[materia]
 
 media=media/cont
-print(f"La media è {media}")
+print(f"La media è {round(media, 3)}")
