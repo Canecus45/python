@@ -1,4 +1,5 @@
 {
     "editor.formatOnPaste": false,
-    "editor.defaultFoldingRangeProvider": "ms-python.black-formatter"
+    "editor.defaultFoldingRangeProvider": "ms-python.black-formatter",
+    "python.REPL.enableREPLSmartSend": false
 }
