@@ -24,10 +24,8 @@ def stampaLuglio2(macchine):
         if n == "AA123BB":
             for k in macchine[n]:
                 if k[0] == "luglio":
-                    print(k[0])
                     for v in k[1]:
                         print(v)
-                    print(k[2])
 
 
 # 7
