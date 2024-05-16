@@ -1,13 +1,3 @@
-"""
-Popola struttura
-Visualizza
-somma ore assenza
-numero materie insufficenti
-meida tutte materie
-massimo e minimo tutte materie
-"""
-
-
 class Pagelle:
     def __init__(self, nome) -> None:
         self.tuplavoti = []
