@@ -25,7 +25,10 @@ class Studente(Persona):
 
     def __init__(self, nome, cognome, età, residenza, corso_di_studio) -> None:
         super().__init__(nome, cognome, età, residenza)
-        self.corso_di_studio = corso_di_studio
+        if corso_di_studio == None:
+            self.corso_di_studio = corso_di_studio
+        else:
+            self.corso_di_studio = None
 
     def scheda_personale(self) -> str:
         s = f"{super().scheda_personale()}\ncorso di studio: {self.corso_di_studio}"
